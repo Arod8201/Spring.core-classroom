@@ -2,9 +2,12 @@ package com.srping.core.session01;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import com.srping.core.session01.beans.Hello;
+import com.srping.core.session01.conf.SpringConfig;
 
 public class TestHello2 {
 	@Test
@@ -19,5 +22,12 @@ public class TestHello2 {
 
 		Hello hello2 = ctx.getBean("hello", Hello.class);
 		System.out.println("hello2: " + hello2);
+		
+		// Java 配置: SpringConfig.java
+		ApplicationContext ctx2 = new AnnotationConfigApplicationContext(SpringConfig.class);
+		Hello hello3 = ctx2.getBean(Hello.class);
+		Hello hello4 = ctx2.getBean("hello", Hello.class);
+		System.out.println("hello3: " + hello3);
+		System.out.println("hello4: " + hello4);
 	}
 }
