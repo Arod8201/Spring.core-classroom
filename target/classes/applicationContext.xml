@@ -227,4 +227,7 @@
 	<bean id="carFactory"
 		  class="com.srping.core.session03.beans.CarFactory"></bean>
 	
+	<!-- 掃描配置 -->
+	<context:component-scan base-package="com.srping.core.session03.mvc" />
+		
 </beans>
