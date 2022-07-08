@@ -1,6 +1,6 @@
 # Spring.core-classroom
 東認課程 (產訓 ) - Java Spring 20220617 
-
+<pre>
 -- 建立 Emp 資料表
 create table if not exists emp (
 	eid int not null auto_increment, -- 主鍵
@@ -50,3 +50,5 @@ insert into job(jname, eid) values ('jobK', 4);
 insert into job(jname, eid) values ('jobL', 3);
 insert into job(jname) values ('jobM');
 insert into job(jname) values ('jobN');
+
+</pre>
