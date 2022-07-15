@@ -5,6 +5,7 @@ import java.util.List;
 
 // PO (persistent object)
 public class Emp {
+	
 	// 欄位
 	private Integer eid;
 	private String ename;
